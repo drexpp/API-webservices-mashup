@@ -1,0 +1,6 @@
+0.4 Funciona, youtube y spotify(+2 botones para informacion)
+0.5 Nuevo css para el index
+0.5.5 Nueva cabecera index MusicDirect, recursos consumidos a excepcion de musixmatch
+0.6 Ya funciona musixmatch, he incluido tests de todas las apis para al menos confirmar que
+ningun recurso devuelvo es null. (Harian  falta mas).
+0.7 Cambiado el nombre del proyecto de "YoutubeCarlos" por "MusicDirect".

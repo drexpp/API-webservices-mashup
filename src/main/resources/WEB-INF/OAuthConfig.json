@@ -1,0 +1,9 @@
+{	
+	"Spotify":{
+		"tokenUrl":"https://accounts.spotify.com/api/token",
+		"clientId":"4c97a411bf4a49eeaa48287cd817d85a",
+		"clientSecret":"a98ff5797d784cc6bb20ce94babb3da7" ,
+		"authorizationFormUrl":"https://accounts.spotify.com/authorize",
+		"scopes":["playlist-modify-public", "playlist-modify-private","playlist-read-private","playlist-read-collaborative","user-library-read"]
+	}
+}		

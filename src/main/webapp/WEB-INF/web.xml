@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>aiss.HelloWorldServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/helloworld</url-pattern>
+  </servlet-mapping>
+  
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>SearchController</display-name>
+    <servlet-name>SearchController</servlet-name>
+    <servlet-class>aiss.controller.SearchController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchController</servlet-name>
+    <url-pattern>/SearchController</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>PlaylistControllerServlet</display-name>
+    <servlet-name>PlaylistControllerServlet</servlet-name>
+    <servlet-class>aiss.controller.PlaylistController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PlaylistControllerServlet</servlet-name>
+    <url-pattern>/PlaylistController</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>NewPlaylistControllerServlet</display-name>
+    <servlet-name>NewPlaylistControllerServlet</servlet-name>
+    <servlet-class>aiss.controller.NewPlaylistController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewPlaylistControllerServlet</servlet-name>
+    <url-pattern>/NewPlaylistController</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+    <description></description>
+    <display-name>NewSongToPlaylistServlet</display-name>
+    <servlet-name>NewSongToPlaylistServlet</servlet-name>
+    <servlet-class>aiss.controller.NewSongToPlaylist</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewSongToPlaylistServlet</servlet-name>
+    <url-pattern>/NewSongToPlaylist</url-pattern>
+  </servlet-mapping>
+  
+   	<!-- Error page -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+	<!-- Welcome page -->
+
+  
+  
+  <!-- Spotify OAuth Servlet 
+    <servlet>
+  	<servlet-name>SpotifyAuthController</servlet-name>
+  	<servlet-class>aiss.controller.ouath.GenericAuthController</servlet-class>
+  	<init-param>
+  		<param-name>provider</param-name>
+  		<param-value>Spotify</param-value>
+  	</init-param>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>SpotifyAuthController</servlet-name>
+ 	<url-pattern>/AuthController/Spotify</url-pattern>
+ </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>SpotifyOAuth2Callback</servlet-name>
+  	<servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+  	<init-param>
+  		<param-name>provider</param-name>
+  		<param-value>Spotify</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>onSuccess</param-name>
+  		<param-value>redirect:/PlaylistController</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SpotifyOAuth2Callback</servlet-name>
+  	<url-pattern>/oauth2callback/Spotify</url-pattern>
+  </servlet-mapping>
+	-->
+	
+	 <servlet>
+    <description></description>
+    <display-name>SpotifyAuthController</display-name>
+    <servlet-name>SpotifyAuthController</servlet-name>
+    <servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
+    <init-param>
+    	<param-name>provider</param-name>
+    	<param-value>Spotify</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpotifyAuthController</servlet-name>
+    <url-pattern>/AuthController/Spotify</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SpotifyOAuth2Callback</display-name>
+    <servlet-name>SpotifyOAuth2Callback</servlet-name>
+    <servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+    <init-param>
+    	<param-name>provider</param-name>
+    	<param-value>Spotify</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>onSuccess</param-name>
+    	<param-value>redirect:/PlaylistController</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpotifyOAuth2Callback</servlet-name>
+    <url-pattern>/oauth2callback/Spotify</url-pattern>
+  </servlet-mapping>    
+</web-app>
